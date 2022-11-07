@@ -44,6 +44,11 @@ header a {
 
 .about__image {
     width: 500px;
+
+}
+
+.about__images {
+    animation: fadeInRight 2s;
 }
 
 .about__sun-image {
@@ -84,6 +89,7 @@ header a {
 
 .about__info {
     max-width: 550px;
+    animation: fadeInLeft 2s;
 }
 
 .form {
