@@ -219,6 +219,55 @@ footer{
         height: 75px;
     }
  }
+
+ .features{
+    background-color: #fff;
+    padding: 115px 60px;
+    display: grid;
+ }
+
+ .cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    
+ }
+
+ .card{
+    padding: 35px 40px 25px 40px;
+    border: 1px #D9E4E6;
+    border-radius: 5px;
+ }
+
+ .card h3{
+    font-size: 16px;
+    line-height: 22px;
+    opacity: 0.8;
+ }
+
+ .card__logo{
+    height: 100px;
+    width: 100px;
+    font-size: 32px;
+    font-weight: 700;
+    background-color: #eaeff9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+ }
+
+ .fa-solar-panel{
+    color: #ffb406;
+ }
+
+ .fa-clock{
+    color: #ad1714;
+ }
+
+ .fa-chart-line{
+    color: #22a030;
+ }
   
  /* Мобильные устройства */
  @media (max-width: 720px) {
@@ -267,5 +316,14 @@ footer{
   
     .footer__container {
         flex-direction: column;
+    }
+
+    .features{
+        padding: 50px 10px;
+        
+    }
+
+    .cards{
+        grid-template-columns: auto;
     }
  }
