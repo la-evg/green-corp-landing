@@ -235,8 +235,7 @@ footer{
 
  .card{
     padding: 35px 40px 25px 40px;
-    border: 1px #D9E4E6;
-    border-radius: 5px;
+    border: 1px solid #D9E4E6;
  }
 
  .card h3{
@@ -268,6 +267,64 @@ footer{
  .fa-chart-line{
     color: #22a030;
  }
+
+ .features__border{
+    margin: 50px 0;
+    border: 1px solid #E6EAF4;
+ }
+
+ .features__feedback{
+    display: flex;
+ }
+
+ .features__feedback-left{
+    margin-right: 10px;
+ }
+ .features__feedback-left h2{
+    font-size: 48px;
+ }
+
+ .features__feedback-left p{
+    font-size: 18px;
+    line-height: 26px;
+    opacity: 0.7;
+ }
+
+ .features__feedback-right{
+    display: flex;
+    align-items:center;
+    
+ }
+
+ .features__box{
+    padding: 30px 40px 25px 40px;
+    color: white;
+    border-radius: 25px;
+    height: 50%;
+ }
+
+ .features__box h3{
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 48px;
+ }
+
+ .features__savings-box{
+    background-color: #dc5e26;
+    box-shadow: 0px 6px 0 rgb(221 95 38 / 20%);
+    margin-right: 30px;
+ }
+
+ .features__rate-box{
+    background-color: #1D263A;
+    box-shadow: 0px 6px 0 rgb(29 38 58 / 20%);
+ }
+
+ .stars{
+    color: #ff7039;
+ }
+
+ 
   
  /* Мобильные устройства */
  @media (max-width: 720px) {
@@ -326,4 +383,25 @@ footer{
     .cards{
         grid-template-columns: auto;
     }
+
+    .features__feedback{
+        flex-direction: column;
+     }
+
+     .features__feedback-left h2{
+        font-size: 36px;
+     }
+
+     .features__feedback-right{
+        flex-direction: column;
+        align-items: stretch;
+     }
+
+     .features__box h3{
+        font-size: 36px;
+     }
+
+     .features__savings-box{
+        margin-bottom: 30px;
+     }
  }
