@@ -55,6 +55,7 @@ header a {
 }
 
 .about {
+    position: relative;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -472,4 +473,12 @@ footer{
      .promo__right{
         padding: 50px 10px;
      }
+ }
+
+ .orb-canvas{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
  }
