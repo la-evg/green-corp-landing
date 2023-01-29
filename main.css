@@ -9,10 +9,18 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    position: sticky;
-    background-color: #fff;
+    position: fixed;
+    background: rgba(255, 255, 255, 0);
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 1;
+    transition: 0.25 ease;
+}
+
+.header__scrolled{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 12px 34px -11px rgb(65 62 101 / 10%);
 }
 
 a {
@@ -59,7 +67,7 @@ header a {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding-top: 115px;
+    padding-top: 200px;
     padding-bottom: 115px;
     background: url('img/back.png') no-repeat;
     background-position: center;
@@ -482,3 +490,4 @@ footer{
     height: 100%;
     width: 100%;
  }
+
