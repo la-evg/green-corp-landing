@@ -20,8 +20,8 @@ function initIncreaseNumberAnimation() {
 
 
 document.querySelector('#budget').addEventListener('change', function handleSelectChange(event) {
-    
-    if (event.target.value === "other"){
+
+    if (event.target.value === "other") {
         let formContainer = document.createElement('div');
         formContainer.classList.add('form__group');
         formContainer.classList.add('form__other-input');
@@ -31,22 +31,22 @@ document.querySelector('#budget').addEventListener('change', function handleSele
         input.type = 'text'
 
         formContainer.appendChild(input);
-        document.querySelector('form').insertBefore(formContainer, document.querySelector('.form__submit')); 
+        document.querySelector('form').insertBefore(formContainer, document.querySelector('.form__submit'));
     }
 
     let otherInput = document.querySelector('.form__other-input')
-    if (event.target.value !== 'other' && Boolean(otherInput)){
-        
+    if (event.target.value !== 'other' && Boolean(otherInput)) {
+
         document.querySelector('form').removeChild(otherInput)
     }
-  });
+});
 
-  //AnimationScroll
-  let animationInited = false;
- window.addEventListener('scroll', updateScroll)
+//AnimationScroll
+let animationInited = false;
+window.addEventListener('scroll', updateScroll)
 
- function updateScroll() {
-    if (window.scrollY > 0){
+function updateScroll() {
+    if (window.scrollY > 0) {
         document.querySelector('header').classList.add('header__scrolled')
     } else {
         document.querySelector('header').classList.remove('header__scrolled')
@@ -58,3 +58,18 @@ document.querySelector('#budget').addEventListener('change', function handleSele
         initIncreaseNumberAnimation()
     }
 }
+
+function addSmoothScroll(link) {
+    link.addEventListener('click', onLinkClick)
+}
+
+function onLinkClick(event) {
+    event.preventDefault();
+    document.querySelector(event.target.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+    });
+}
+
+let hrefElements = document.querySelectorAll('a[href^="#"]');
+hrefElements.forEach(elem => {addSmoothScroll(elem)})
+addSmoothScroll(document.querySelector('.more-button'))
